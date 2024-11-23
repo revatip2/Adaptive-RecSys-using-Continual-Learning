@@ -86,3 +86,30 @@ Here are the Top-K accuracy results for the **Baseline LSTM** and **Transfer Lea
 ### Future Work:
 - Experiment with other **continual learning techniques** to further improve performance.
 - Implement additional **optimization strategies** for computational efficiency.
+
+---
+## Computational Setup
+
+For model training and evaluation, we utilized **CARC**, a high-performance computing cluster. The following steps were involved in utilizing the cluster for training:
+
+1. **Allocate Resources with `salloc`**:  
+   To request a compute node on the cluster, use the `salloc` command. Example:
+   ```bash
+   salloc --nodes=1 --time=24:00:00 --partition=your_partition --mem=32G
+   ```
+   Alternatively, you could use a my.job file.
+   
+2. Prepare the environment
+  ```bash
+  module load gcc/3.x
+  module load python/3.x
+  source bin/activate
+```
+3. **Run Replay Buffer**: Train the model using the **Sliding Window with Replay Buffer** method.
+   ```bash
+   python main_replay_buffer.py
+4. **Run CL with Transfer Learning**:
+   ```bash
+   python main_cl_transfer_learning.py
+5. Compare Top-K Accuracy values.
+
