@@ -73,3 +73,16 @@ Here are the Top-K accuracy results for the **Baseline LSTM** and **Transfer Lea
 - **Top-K Accuracy**: Measures how often the correct product is found within the top K predictions. This metric is crucial for recommendation systems.
 
 ---
+## Results & Analysis
+
+### Key Findings:
+- The **Sliding Window with Replay Buffer** method outperforms the baseline LSTM in adapting to new data, with consistent performance even after new data ingestion.
+- **Transfer Learning** shows better stability over time compared to the baseline models, especially in the face of concept drift.
+
+### Challenges:
+- Handling **large datasets** and maintaining **computational efficiency** were significant challenges.
+- The **complexity of managing large action spaces** for recommendation systems. The insutry standard for top-k approaches with large action spaces is 20-30%.
+
+### Future Work:
+- Experiment with other **continual learning techniques** to further improve performance.
+- Implement additional **optimization strategies** for computational efficiency.
